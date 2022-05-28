@@ -9,12 +9,25 @@
 
     <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css">
     <link rel="stylesheet" href="node_modules/reveal.js/dist/theme/simple.css">
+
+		<link rel="stylesheet" href="node_modules/reveal.js/plugin/highlight/monokai.css">
   </head>
   <body>
     <div class="reveal">
 			<div class="slides">
 				<section>Slide 1</section>
 				<section>Slide 2</section>
+        <section>
+          <pre>
+            <code data-trim data-noescape class="language-python">
+              def fib():
+                a, b = 0, 1
+                while True:
+                  yield a
+                  a, b = b, a + b
+            </code>
+          </pre>
+        </section>
 			</div>
 		</div>
     <script src="index.js" charset="utf-8" type="module"></script>
