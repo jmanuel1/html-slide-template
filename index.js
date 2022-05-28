@@ -4,6 +4,7 @@ import Notes from './node_modules/reveal.js/plugin/notes/notes.esm.js';
 import Highlight from './node_modules/reveal.js/plugin/highlight/highlight.esm.js';
 
 let deck = new Reveal({
-   plugins: [ Markdown, Notes, Highlight ]
+  hash: true,
+  plugins: [ Markdown, Notes, Highlight ]
 });
 deck.initialize();
