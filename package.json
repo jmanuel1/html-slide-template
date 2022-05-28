@@ -1,0 +1,11 @@
+{
+  "name": "html-slide-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Jason Manuel <jama.indo@hotmail.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "reveal.js": "^4.3.1"
+  }
+}
