@@ -36,7 +36,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   --r-heading3-size: 1.55em;
   --r-heading4-size: 1em;
   --r-code-font: monospace;
-  --r-link-color: #00008B;
+  --r-link-color: #fff;
   --r-link-color-dark: #00003f;
   --r-link-color-hover: #0000f1;
   --r-selection-background-color: rgba(0, 0, 0, 0.99);
@@ -51,6 +51,10 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   background: linear-gradient(to right, #0000 45%, #fff 45%),
     linear-gradient(165deg, #0000 59.5%, #444d56 59.5% 60.5%, #0000 60.5%),
     linear-gradient(to right, var(--r-background-color) 45%, #fff 45%);
+}
+
+.slide-background.one-column-text {
+  background: linear-gradient(to right, var(--r-background-color) 42.5%, #fff 42.5%);;
 }
 
 .reveal {
@@ -70,6 +74,10 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   color: var(--r-selection-color);
   background: var(--r-selection-background-color);
   text-shadow: none;
+}
+
+.reveal .slides {
+  text-align: left;
 }
 
 .reveal .slides section,
@@ -114,7 +122,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 .reveal h2 {
   font-size: var(--r-heading2-size);
   color: #fff;
-  grid-column: 2 / 10;
+  grid-column: 1 / 10;
   grid-row: 1 / 3;
   align-self: center;
   justify-self: start;
@@ -143,9 +151,20 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 }
 
 .reveal .slides>section .body, .reveal .slides>section>section .body {
-  grid-column: 10 / -1;
+  grid-column: 11 / -1;
   grid-row: 1 / -1;
   margin-top: calc(100%/9);
+}
+
+.reveal .slides>section.one-column-text .body, .reveal .slides>section.one-column-text>section .body {
+  grid-column: 1 / 9;
+  grid-row: 3 / -1;
+  color: #fff;
+}
+
+.reveal .slides>section.one-column-text .column-2, .reveal .slides>section.one-column-text>section .column-2 {
+  grid-column: 10 / -1;
+  grid-row: 1 / -1;
 }
 
 .subtitle {
@@ -358,10 +377,15 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
  *********************************************/
 .reveal a {
   color: var(--r-link-color);
-  text-decoration: none;
+  text-decoration: underline;
   transition: color 0.15s ease;
 }
 
+.reveal a.on-light-background {
+  color: var(--r-link-color-dark);
+}
+
+/* TODO: Improve color contrast with dark backgrounds and dark links */
 .reveal a:hover {
   color: var(--r-link-color-hover);
   text-shadow: none;

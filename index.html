@@ -18,7 +18,7 @@
         <section data-markdown>
           <textarea data-template>
             # Slide template
-            [My website](https://jason-manuel.com)
+            [My website](https://jason-manuel.com) <!-- .element class="on-light-background" -->
             <!-- .element class="subtitle" -->
           </textarea>
         </section>
@@ -37,10 +37,28 @@
                             * ninth level -->
           </div>
         </section>
-        <section>Slide 2</section>
+        <section class="one-column-text">
+          <h2>Slide 2</h2>
+          <div data-markdown class="body">
+            * first level
+              * second level
+                * third level
+                  * fourth level
+                    * fifth level
+                      * sixth level
+
+            [A link](https://google.com)
+          </div>
+          <div data-markdown class="column-2">
+            ![Me](https://avatars.githubusercontent.com/u/7255867?v=4)
+
+            A paragraph here.
+          </div>
+        </section>
         <section>
           <pre>
             <code data-trim data-noescape class="language-python">
+              # Fibonacci generator function
               def fib():
                 a, b = 0, 1
                 while True:
