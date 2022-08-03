@@ -57,6 +57,10 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   background: linear-gradient(to right, var(--r-background-color) 42.5%, #fff 42.5%);;
 }
 
+.slide-background.main-point {
+  background: #444d56;
+}
+
 .reveal {
   font-family: var(--r-main-font);
   font-size: var(--r-main-font-size);
@@ -64,6 +68,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   color: var(--r-main-color);
 }
 
+/* TODO: Improve selection color contrast on dark backgrounds. */
 .reveal ::selection {
   color: var(--r-selection-color);
   background: var(--r-selection-background-color);
@@ -126,6 +131,11 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   grid-row: 1 / 3;
   align-self: center;
   justify-self: start;
+}
+
+.reveal .slides>section.main-point h2, .reveal .slides>section.main-point>section h2 {
+  grid-row: 2 / 6;
+  grid-column: 1 / 15;
 }
 
 .reveal h3 {
