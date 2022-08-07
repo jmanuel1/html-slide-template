@@ -3,8 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Slides</title>
-    <!-- TODO: a11y? -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Do not use user-scalable=no and don't set the maximum-scale. See
+    comment on accessibility at
+    https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag#viewport_basics.
+
+    Also see:
+    * https://www.a11yproject.com/posts/never-use-maximum-scale/
+    * https://www.w3.org/WAI/standards-guidelines/act/rules/b4f0c3/proposed/ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="node_modules/reveal.js/dist/reset.css">
 
     <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css">
