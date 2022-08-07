@@ -39,8 +39,6 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   --r-link-color: #fff;
   --r-link-color-dark: #00003f;
   --r-link-color-hover: #0000f1;
-  --r-selection-background-color: rgba(0, 0, 0, 0.99);
-  --r-selection-color: #fff;
 }
 
 .slide-background {
@@ -66,19 +64,6 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   font-size: var(--r-main-font-size);
   font-weight: normal;
   color: var(--r-main-color);
-}
-
-/* TODO: Improve selection color contrast on dark backgrounds. */
-.reveal ::selection {
-  color: var(--r-selection-color);
-  background: var(--r-selection-background-color);
-  text-shadow: none;
-}
-
-.reveal ::-moz-selection {
-  color: var(--r-selection-color);
-  background: var(--r-selection-background-color);
-  text-shadow: none;
 }
 
 .reveal .slides {
