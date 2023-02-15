@@ -116,6 +116,10 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   justify-self: start;
 }
 
+.one-column-text h2 {
+  grid-column: 1 / 8;
+}
+
 .main-point h2 {
   align-self: center;
 }
@@ -190,13 +194,21 @@ html.print-pdf .reveal .slides section {
   grid-row: 1 / -1;
 }
 
-.reveal .slides>section.one-column-text .body, .reveal .slides>section.one-column-text>section .body {
-  grid-column: 1 / 9;
+.reveal .slides>section.one-column-text .body, .reveal .pdf-page>section.one-column-text .body, .reveal .slides>section.one-column-text>section .body {
+  grid-column-end: 8;
   grid-row: 3 / -1;
   color: #fff;
 }
 
-.reveal .slides>section.one-column-text .column-2, .reveal .slides>section.one-column-text>section .column-2 {
+.reveal .slides>section.one-column-text .body, .reveal .slides>section.one-column-text>section .body {
+  grid-column-start: 1;
+}
+
+.reveal .pdf-page>section.one-column-text .body {
+  grid-column-start: 2;
+}
+
+.reveal .slides>section.one-column-text .column-2, .reveal .pdf-page>section.one-column-text .column-2, .reveal .slides>section.one-column-text>section .column-2 {
   grid-column: 10 / -1;
   grid-row: 1 / -1;
 }
